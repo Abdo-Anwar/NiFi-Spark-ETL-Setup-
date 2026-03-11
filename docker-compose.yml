@@ -7,7 +7,7 @@ services:
   # ─────────────────────────────────────────
   mysql:
     image: mysql:8.0
-    container_name: tpch_mysql
+    container_name: tpch_mysql_lab
     restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: root1234
@@ -30,7 +30,7 @@ services:
   # ─────────────────────────────────────────
   nifi:
     image: apache/nifi:2.0.0          # Java-21-based image
-    container_name: tpch_nifi
+    container_name: tpch_nifi-lab
     restart: unless-stopped
     depends_on:
       mysql:
